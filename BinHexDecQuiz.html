@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+        <title> BinHexDecQuiz </title>
+        <link rel="stylesheet" href="DecToBin.css">
+</head>
+<body>
+<div class="container">
+<h2 style="text-align:center;"> Θετικός δεκαδικός σε μη προσημασμένο δυαδικό. </h2>
+		
+        <form>
+            <label for="Dec">Δεκαδικός Αριθμός</label>
+            <input type="number" min=0 id="Dec"/> 
+            <label for="Bin">Δυαδικός Αριθμός(Αποτέλεσμα)</label>
+            <input  type="string" id="Bin" size="40" readonly/>
+            <input type="button" id="Submit" value="Εμφάνιση" onclick="DecToBin()"/>
+            <input type="button" id="Clear" value="Καθαρισμός" onclick="Clean()"/>
+		</form>
+         <table  id="solutionList"></table>
+
+    </div>
+    <div class="container1">
+<h2 style="text-align:center;"> Θετικός δεκαδικός σε προσημασμένο δυαδικό σταθερού μήκους.  </h2>
+
+        <form>
+            <label for="Dec1">Δεκαδικός Αριθμός</label>
+            <input type="number" min=0 id="Dec1"/>
+            <label for="bits1">Πλήθος bits</label>
+            <select id="bits1" name="bits1">
+                <option value="32">32 bits</option>
+                <option value="4">4 bits</option>
+                <option value="8">8 bits</option>
+                <option value="16">16 bits</option>
+                <option value="64">64 bits</option> 
+            </select>
+            <label for="Bin1">Δυαδικός Αριθμός (Αποτέλεσμα)</label>
+            <input  type="string" id="Bin1" size="40" readonly/>
+            <input type="button" id="Submit1" value="Εμφάνιση" onclick="DecToBin1()"/>
+            <input type="button" id="Clear1" value="Καθαρισμός" onclick="Clean1()"/>
+		</form>
+         <table  id="solutionList1"></table>
+         <div id="solutionDiv1"></div>
+      </div>
+      <div class="container">
+<h2 style="text-align:center;"> Αρνητικός δεκαδικός σε προσημασμένο δυαδικό (συμπλήρωμα) σταθερού μήκους. </h2>
+<form>
+    <label for="Dec2">Δεκαδικός Αριθμός</label>
+    <input type="number"  id="Dec2"/>
+    <label for="bits2">Πλήθος bits</label>
+    <select id="bits2" name="bits2">
+        <option value="32">32 bits</option>
+        <option value="4">4 bits</option>
+        <option value="8">8 bits</option>
+        <option value="16">16 bits</option>
+        <option value="64">64 bits</option> 
+    </select>
+    <label for="Bin2">Δυαδικός Αριθμός (Αποτέλεσμα)</label>
+    <input  type="string" id="Bin2" size="40" readonly/>
+    <input type="button" id="Submit2" value="Λύση" onclick="DecToBin2()"/>
+    <input type="button" id="Clear2" value="Καθαρισμός" onclick="Clean2()"/>
+</form>
+
+ <table  id="solutionList2"></table>
+ <div id="solutionDiv2"></div>  
+ <div id="solutionDiv2a"> </div> 
+            
+</div>
+<div class="container1">
+<h2 style="text-align:center;"> Πραγματικός δεκαδικός σε δυαδικό (ΙΕΕ 745) UNDER CONSTRUCTION </h2>
+ <form>
+        <label for="Dec3">Ακέραιο μέρος</label>
+        <input  type="number" id="Dec3"/>
+        <b>.</b>
+        <label for="Float3">Δεκαδικό μέρος</label>
+        <input  type="number" id="Float3" />
+        <label for="bits1">Πλήθος bits</label>
+        <select id="bits3" name="bits3">
+            <option value="32">32 bits</option>
+            <option value="64">64 bits</option>
+        </select>
+        <label for="Bin3sign">Πρόσημο (Αποτέλεσμα)</label>
+        <input type="string"  id="Bin3sign" size="1" readonly/>
+        <label for="Bin3exp">Εκθέτης (Αποτέλεσμα)</label>
+        <input type="string"  id="Bin3exp" size="10" readonly/>
+        <label for="Bin3mant">Mantissa (Αποτέλεσμα) </label>
+        <input type="string"  id="Bin3mant" size="25" readonly/>
+        <input type="button" id="Submit3" value="Λύση" onclick="DecToBin3()"/>
+        <input type="button" id="Clear2" value="Καθαρισμός" onclick="Clean3()"/>
+        </form>
+        <div id="solutionDiv3"></div> <!--ακέραιο μέρος-->
+        <div id="solutionDiv3a"></div> <!--δεκαδικό μέρος-->
+        <div id="solutionDiv3b"></div> <!--exponend-->
+        <div id="solutionDiv3c"></div> <!--mantissa-->
+        <div id="solutionDiv3d"></div> <!--τελικό αποτέλεσμα-->
+          
+   
+           <script src="DecToBin.js"></script>
+           <script src="DecToBin1.js"></script>
+           <script src="DecToBin2.js"></script>
+           <script src="DecToBin3.js"></script>
+        </div>
+
+
+</body>
+</html>
